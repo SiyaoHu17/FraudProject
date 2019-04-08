@@ -1,0 +1,42 @@
+New York Property Fraud Analysis: Group 3
+
+
+Objective:
+determine fraudulent properties
+
+Solution:
+the propensity being fraud
+
+Data:
+1 M+; 30 fields(16num; 14 cate)
+Department of Finance (DOF), City of New York
+
+
+Metrics: (about land value)
+value compared to other parameters->fraud score
+(three monetary fields: total market value of land, total market value, full value of property)
+(size, tax class, location)
+
+
+Steps:
+
+-exploratory analysis
+data description(data summary, featured variables)(num: %pop, unique, mean, st, min, median, max, distribution)(cate:%pop, unique, bar)
+
+-create variables
+consult expert to create synthetic variables
+base variables, normalized variables(num, scale base value), grouped varaibles(cate, group record, fill missing, scale base)
+
+-data cleaning
+
+-build model
+scaled variables
+PCA (principle coponent analysis)->top 10 principal components
+scaled pricipal components
+two models and two scores (reconstruction error of antoencoder;Manhattan Distance of the parameters)
+aggregated result from two models (average quantile score)
+
+
+
+Evaluation:
+top 10 unusal properties: disproportiate value in relation to its size location and tax class
